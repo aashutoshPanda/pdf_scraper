@@ -23,7 +23,7 @@ def remove_stop_words(text):
     return " ".join(filtered_sentence)
 
 
-for path in Path("text_files").iterdir():
+for path in Path("profile_pdfs").iterdir():
     if path.is_file():
         if path.suffix != ".pdf":
             continue
