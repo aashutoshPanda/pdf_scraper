@@ -11,7 +11,8 @@ app.config['UPLOAD_FOLDER'] = os.getcwd() + "/api/api_uploaded_files/"
 def upload_file():
     if request.method == 'POST':
         f = request.files['file']
-        f.save(secure_filename(f.filename))
+        f.save(os.path.join(
+            app.config['UPLOAD_FOLDER'], secure_filename(f.filename)))
         return 'file uploaded successfully'
     else:
         return render_template('upload.html')
