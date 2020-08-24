@@ -8,6 +8,7 @@ pdf-scraper is an open source API for :
 ## Demo
 
 You can try the [demo](http://ashutoshpanda01.pythonanywhere.com/).
+Live till -  Tuesday 24 November 2020
 ### Installation for API (Ubuntu)
 
 ```bash
@@ -65,7 +66,7 @@ python3 task_3/main.py
 		text from PDFs
 		filtered text from linkedIn resumes (PDF)
 - The routes namely 'text' & 'text_without_stopwords' perform these tasks
-- The API is hosted at pythonanywhere at [pdf-scraper](http://http://ashutoshpanda01.pythonanywhere.com/ "pdf-scraper")
+- The API is hosted at pythonanywhere at [pdf-scraper](http://http://ashutoshpanda01.pythonanywhere.com/ "pdf-scraper") till Tuesday 24 November 2020
 ### Installation for API (Ubuntu)
 
 ```bash
