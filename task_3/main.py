@@ -7,7 +7,8 @@ from nltk.corpus import stopwords
 nltk.download('stopwords')
 nltk.download('punkt')
 
-# Un-comment to use the helper function to generate the extra-stop-words
+# Un-comment the line below to use the helper function to generate the extra-stop-words from helper           <---IMPORTANT
+# function I have hard-coded to reduce runtime
 # extra_stop_words = get_potential_stop_words()
 
 extra_stop_words = ['Present', '-', 'of', 'Page', ')', 'months', ',', '·', 'Experience',
