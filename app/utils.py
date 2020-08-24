@@ -7,11 +7,14 @@ from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
 nltk.download('stopwords')
 nltk.download('punkt')
-set(stopwords.words('english'))
 
+extra_stop_words = ['Present', '-', 'of', 'Page', ')', 'months', ',', '·', 'Experience',
+                    '1', 'LinkedIn', 'Skills', 'Top', 'Contact', 'Education', '(', 'at']
 
 # set of stop words
-stop_words = set(stopwords.words('english'))
+stop_words = stopwords.words('english')
+stop_words.extend(extra_stop_words)
+stop_words = set(stop_words)
 
 
 def remove_stop_words(text):
