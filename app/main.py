@@ -7,7 +7,8 @@ from flask import Flask, render_template, request, jsonify
 from utils import get_text, get_text_without_stop_words
 
 app = Flask(__name__)
-app.config['UPLOAD_FOLDER'] = os.getcwd() + "/app/api_uploaded_files/"
+app.config['UPLOAD_FOLDER'] = os.getcwd(
+) + "pdf_scraper/app/api_uploaded_files/"
 
 
 # route to extract text from given pdf file
@@ -20,7 +21,8 @@ def text():
             app.config['UPLOAD_FOLDER'], secure_filename(f.filename)))
 
         # making pathlib 'Path' object to send to helper function
-        path = Path(os.getcwd() + "/app/api_uploaded_files/" + f.filename)
+        path = Path(
+            os.getcwd() + "pdf_scraper/app/api_uploaded_files/" + f.filename)
 
         if (not path.is_file()) or (path.suffix != ".pdf"):
             return jsonify(error=400, text="Invalid Request"), 400
@@ -45,7 +47,8 @@ def text_without_stopwords():
             app.config['UPLOAD_FOLDER'], secure_filename(f.filename)))
 
         # making pathlib 'Path' object to send to helper function
-        path = Path(os.getcwd() + "/app/api_uploaded_files/" + f.filename)
+        path = Path(
+            os.getcwd() + "pdf_scraper/app/api_uploaded_files/" + f.filename)
         if (not path.is_file()) or (path.suffix != ".pdf"):
             return jsonify(error=400, text="Invalid Request"), 400
 
