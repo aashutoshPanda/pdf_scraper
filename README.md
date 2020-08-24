@@ -17,7 +17,8 @@ pip install -r requirements.txt
 python3 app/main.py
 ```
 
-##Tasks
+## Tasks
+
 Code for each task is present in seperate folders
 Task 4 is the repo itself.
 
