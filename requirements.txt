@@ -1,3 +1,5 @@
 textract
 nltk
 Flask
+gunicorn
+pathlib

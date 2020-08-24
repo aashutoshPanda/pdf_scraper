@@ -20,7 +20,7 @@ fields = ['Name', 'Text', 'Text-without-stopwords']
 
 
 # name of csv file
-filename = "pdf_to_text.csv"
+filename = "task_1_to_3/pdf_to_text.csv"
 rows = []
 
 
@@ -33,7 +33,7 @@ def remove_stop_words(text):
     return " ".join(filtered_sentence)
 
 
-for path in Path("profile_pdfs").iterdir():
+for path in Path("task_1_to_3/profile_pdfs").iterdir():
     if path.is_file():
         if path.suffix != ".pdf":
             continue

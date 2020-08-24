@@ -6,7 +6,7 @@ from flask import Flask, render_template, request, jsonify
 from utils import get_text, get_text_without_stop_words
 
 app = Flask(__name__)
-app.config['UPLOAD_FOLDER'] = os.getcwd() + "/api/api_uploaded_files/"
+app.config['UPLOAD_FOLDER'] = os.getcwd() + "/api_uploaded_files/"
 
 
 @app.route('/text', methods=['GET', 'POST'])
@@ -16,7 +16,7 @@ def text():
         f.save(os.path.join(
             app.config['UPLOAD_FOLDER'], secure_filename(f.filename)))
 
-        p = Path(os.getcwd() + "/api/api_uploaded_files/" + f.filename)
+        p = Path(os.getcwd() + "/api_uploaded_files/" + f.filename)
         text = get_text(p)
 
         return jsonify(
@@ -34,7 +34,7 @@ def text_without_stopwords():
         f.save(os.path.join(
             app.config['UPLOAD_FOLDER'], secure_filename(f.filename)))
 
-        p = Path(os.getcwd() + "/api/api_uploaded_files/" + f.filename)
+        p = Path(os.getcwd() + "/api_uploaded_files/" + f.filename)
         text_without_stop_words = get_text_without_stop_words(p)
 
         return jsonify(
