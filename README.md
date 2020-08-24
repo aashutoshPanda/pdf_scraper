@@ -8,7 +8,7 @@ pdf-scraper is an open source API for :
 ## Demo
 
 You can try the [demo](http://ashutoshpanda01.pythonanywhere.com/).
-### Installation(Ubuntu)
+### Installation for API (Ubuntu)
 
 ```bash
 git clone https://github.com/aashutoshPanda/pdf_scraper.git
@@ -16,6 +16,8 @@ apt-get install python-dev libxml2-dev libxslt1-dev antiword unrtf poppler-utils
 pip install -r requirements.txt
 python3 app/main.py
 ```
+------------
+
 
 ## Tasks
 
@@ -64,6 +66,14 @@ python3 task_3/main.py
 		filtered text from linkedIn resumes (PDF)
 - The routes namely 'text' & 'text_without_stopwords' perform these tasks
 - The API is hosted at pythonanywhere at [pdf-scraper](http://http://ashutoshpanda01.pythonanywhere.com/ "pdf-scraper")
+### Installation for API (Ubuntu)
+
+```bash
+git clone https://github.com/aashutoshPanda/pdf_scraper.git
+apt-get install python-dev libxml2-dev libxslt1-dev antiword unrtf poppler-utils pstotext tesseract-ocr
+pip install -r requirements.txt
+python3 app/main.py
+```
 
 
 
