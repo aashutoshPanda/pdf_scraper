@@ -1,7 +1,9 @@
 
 import os
+from pathlib import Path
 from werkzeug.utils import secure_filename
 from flask import Flask, render_template, request, jsonify
+from utils import get_text, get_text_without_stop_words
 
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = os.getcwd() + "/api/api_uploaded_files/"
@@ -14,9 +16,12 @@ def text():
         f.save(os.path.join(
             app.config['UPLOAD_FOLDER'], secure_filename(f.filename)))
 
+        p = Path(os.getcwd() + "/api/api_uploaded_files/" + f.filename)
+        text = get_text(p)
+
         return jsonify(
             pdf_name=secure_filename(f.filename),
-            text="random garbage"
+            text=text
         )
 
     return render_template('index.html')
@@ -29,9 +34,12 @@ def text_without_stopwords():
         f.save(os.path.join(
             app.config['UPLOAD_FOLDER'], secure_filename(f.filename)))
 
+        p = Path(os.getcwd() + "/api/api_uploaded_files/" + f.filename)
+        text_without_stop_words = get_text_without_stop_words(p)
+
         return jsonify(
             pdf_name=secure_filename(f.filename),
-            text="random garbage"
+            text_without_stop_words=text_without_stop_words
         )
 
     return render_template('index.html')
