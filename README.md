@@ -35,6 +35,7 @@ Instructions to run
 git clone https://github.com/aashutoshPanda/pdf_scraper.git
 apt-get install python-dev libxml2-dev libxslt1-dev antiword unrtf poppler-utils pstotext tesseract-ocr
 pip install -r requirements.txt
+Make folder named 'profile_pdfs' in task_2 folder and add the PDFs in it
 python3 task_2/main.py
 ```
 
@@ -51,6 +52,7 @@ Instructions to run
 git clone https://github.com/aashutoshPanda/pdf_scraper.git
 apt-get install python-dev libxml2-dev libxslt1-dev antiword unrtf poppler-utils pstotext tesseract-ocr
 pip install -r requirements.txt
+Make folder named 'profile_pdfs' in task_3 folder and add the PDFs in it
 python3 task_3/main.py
 ```
 
