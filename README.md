@@ -75,6 +75,19 @@ apt-get install python-dev libxml2-dev libxslt1-dev antiword unrtf poppler-utils
 pip install -r requirements.txt
 python3 app/main.py
 ```
+Making Requests to API running on` http://127.0.0.1:5000/`
+##### TYPE-1 extract-text-from-pdf 
+```bash
+curl --location --request POST 'http://127.0.0.1:5000/text' \
+--form 'path-to-pdf-file-on-your-device'
+
+```
+##### TYPE-2 extract-text-without-stopwords-from-pdf 
+```bash
+curl --location --request POST 'http://127.0.0.1:5000/text_without_stopwords' \
+--form 'path-to-pdf-file-on-your-device'
+
+```
 
 
 
