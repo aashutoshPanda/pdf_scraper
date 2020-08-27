@@ -27,7 +27,6 @@ Task 4 is the repo itself.
 
 ##### Task 1
 - Downloaded 50 LinkedIn resumes and added to task_1 folder.
-- Screenshot of 50 files is present in task_1 folder to reduce space
 
 ##### Task 2
 - Used 'textract' library to get text from all the pdfs
