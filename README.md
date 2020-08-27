@@ -44,9 +44,9 @@ python3 task_2/main.py
 ##### Task 3
 - For Removing stop-words from a given text NLTK's stop-word list 
 (Stop Words: A stop word is a commonly used word (such as “the”, “a”, “an”, “in”) that a search engine has been programmed to ignore, both when indexing entries for searching and when retrieving them as the result of a search query)
-- Some words which are not present in the NLTK's stop-word list but occure frequently in the resumes have to be added to our stop-word list 
+- Some words which are not present in the NLTK's stop-word list but occur frequently in the resumes have to be added to NLTK's stop-word list 
 - So by calucalating the count of unique words across 50 PDF's we can add the words which are present in 85% of the resumes to our new stop-word list
-- Then for each word present in  the given text we can check whether it is present in our updated stop-word-list or not 
+- Then for each word present in  the extracted text we can check whether it is present in our updated stop-word-list or not 
 - If it is present then it is to be removed
 
 Instructions to run
