@@ -20,6 +20,7 @@ for path in Path("task_2/profile_pdfs").iterdir():
 
 
 # writing to csv file
+#hactoberfest update
 with open(filename, 'w') as csvfile:
 
     csvwriter = csv.writer(csvfile)
